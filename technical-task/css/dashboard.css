@@ -1,0 +1,128 @@
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  background: #2c3e50;
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.dashboard-container {
+  flex: 1;
+  display: flex;
+  background: #f4f6f9;
+  width: 100%;
+}
+
+.sidebar {
+  width: 220px;
+  background: #2c3e50;
+  padding: 1.5rem 1rem;
+  color: #fff;
+}
+
+.sidebar nav ul {
+  list-style: none;
+}
+
+.sidebar nav ul li {
+  margin: 1rem 0;
+}
+
+.sidebar nav a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 0.6rem;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.sidebar nav a:hover {
+  background: #34495e;
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 12px;
+  margin: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+th, td {
+  padding: 0.8rem;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+th {
+  cursor: pointer;
+  background: #f9f9f9;
+}
+
+th:hover {
+  background: #f1f1f1;
+}
+
+.pagination {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.form-container {
+  margin-top: 2rem;
+}
+
+.form-container h2 {
+  margin-bottom: 1rem;
+}
+
+.form-actions {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+textarea {
+  resize: vertical;
+}
+#prev-page, #next-page {
+  padding: 0.7rem 1rem;
+  border: none;
+  background: #2c3e50;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn-edit {
+    background: #3498db;
+    color: #fff;
+    padding: 0.4rem 0.8rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+    
+}

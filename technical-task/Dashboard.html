@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+  <div class="header">
+    <h1>Dashboard</h1>
+    <button id="logout-btn" class="btn">Logout</button>
+  </div>
+
+  <div class="dashboard-container">
+    <div class="sidebar">
+      <nav>
+        <ul>
+          <li><a href="#" id="posts-link">Posts</a></li>
+          <li><a href="#" id="create-post-link">Create Post</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="main-content" id="main-content">
+      <div class="table-container" id="posts-section">
+        <div class="table-controls">
+          <input type="text" id="search" placeholder="Search by title or body">
+         
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th data-sort="id">ID</th>
+              <th data-sort="title">Title</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="posts-tbody"></tbody>
+        </table>
+        <div class="pagination">
+          <button id="prev-page" disabled>Previous</button>
+          <span id="page-info"></span>
+          <button id="next-page">Next</button>
+        </div>
+      </div>
+      <div class="form-container" id="form-section" style="display:none;">
+        <h2 id="form-title">Create Post</h2>
+        <form id="post-form">
+          <input type="hidden" id="post-id">
+          <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" id="title" required minlength="3">
+          </div>
+          <div class="form-group">
+            <label for="body">Body</label>
+            <textarea id="body" rows="10" required minlength="10"></textarea>
+          </div>
+          <div class="form-actions">
+            <button type="button" id="cancel-btn" class="btn">Cancel</button>
+            <button type="reset" class="btn">Reset</button>
+            <button type="submit" class="btn">Create</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/auth.js" type="module"></script>
+  <script src="js/store.js" type="module"></script>
+  <script src="js/dashboard.js" type="module"></script>
+</body>
+</html>
